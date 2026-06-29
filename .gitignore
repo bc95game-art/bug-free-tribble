@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (NEVER commit these)
+.env
+.env.local
+.env.*.local
+
+# Database (contains user data — keep private)
+bot_db.json
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

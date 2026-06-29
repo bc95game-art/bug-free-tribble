@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  saraf-bot:
+    build: .
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - ADMIN_TELEGRAM_ID=${ADMIN_TELEGRAM_ID}
+      - CHANNEL_LINK=${CHANNEL_LINK}
+      - SUPPORT_USERNAME=${SUPPORT_USERNAME}
+      - PORT=3000
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./bot_db.json:/app/bot_db.json
